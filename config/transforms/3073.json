@@ -1,0 +1,5 @@
+{"op":"update", "match":{"class":"Agency","id":"1"}, "update": {"name":"VRE"}}
+{"op":"transform","class":"com.kurtraschke.wmatagtfsnames.ShapeDirectionTransformStrategy", "shapeID": "2", "shapeDirection":"1"}
+{"op":"transform","class":"com.kurtraschke.wmatagtfsnames.ShapeDirectionTransformStrategy", "shapeID": "4", "shapeDirection":"1"}
+{"op":"update","match":{"class":"Route","id":"1_2"},"update":{"shortName":"FRED"}}
+{"op":"update","match":{"class":"Route","id":"1_4"},"update":{"shortName":"MAN"}}

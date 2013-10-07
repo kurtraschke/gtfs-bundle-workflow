@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+  <bean class="org.onebusaway.container.spring.PropertyOverrideConfigurer">
+    <property name="properties">
+      <props>
+        <prop key="tripEntriesFactory.throwExceptionOnInvalidStopToShapeMappingException">false</prop>
+      </props>
+    </property>
+  </bean>
+
+  <bean id="gtfs-bundles" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundles">
+    <property name="bundles">
+      <list>
+        <ref bean="A3080" />
+        <ref bean="A3068" />
+        <ref bean="A3034" />
+        <ref bean="A3051" />
+        <ref bean="A3073" />
+        <ref bean="A3030" />
+        <ref bean="ADC" />
+	<!--<ref bean="A3072" />-->
+	<!--<ref bean="A3041" />-->
+	<ref bean="A3090" />
+	<ref bean="A3091" />
+      </list>
+    </property>
+  </bean>
+
+  <bean id="A3080" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/outputs/3080" />
+    <property name="defaultAgencyId" value="3080" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="1" value="3080" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3068" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/outputs/3068" />
+    <property name="defaultAgencyId" value="3068" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="" value="3068" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3034" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/outputs/3034" />
+    <property name="defaultAgencyId" value="3034" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="1" value="3034" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3051" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/outputs/3051" />
+    <property name="defaultAgencyId" value="3051" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="MCRO" value="3051" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3073" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/outputs/3073" />
+    <property name="defaultAgencyId" value="3073" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="1" value="3073" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3030" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/outputs/3030" />
+    <property name="defaultAgencyId" value="3030" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="MET" value="3030" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="ADC" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/outputs/DC" />
+    <property name="defaultAgencyId" value="DC" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="DC" value="DC" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3072" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/inputs/3072.zip" />
+    <property name="defaultAgencyId" value="3072" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="1" value="3072" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3041" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/inputs/3041.zip" />
+    <property name="defaultAgencyId" value="3041" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="ACT" value="3041" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3090" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/inputs/3090.zip" />
+    <property name="defaultAgencyId" value="3090" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="" value="3090" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3091" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/inputs/3091.zip" />
+    <property name="defaultAgencyId" value="3091" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="F1FB7E1D-9018-44B2-9016-8B624721B9E5" value="3091" />
+      </map>
+    </property>
+  </bean>
+
+</beans>

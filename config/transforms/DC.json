@@ -1,0 +1,18 @@
+{"op":"retain","match":{"class":"Agency","id":"DC"}}
+
+{"op":"update","match":{"class":"Route","shortName":"DC98"},"update":{"longName":"Woodley Park - Adams Morgan - McPherson Square Metro"}}
+{"op":"update","match":{"class":"Route","shortName":"DC98"},"update":{"shortName":"WP-MS"}}
+
+{"op":"update","match":{"class":"Route","shortName":"DCDGR"},"update":{"longName":"Dupont - Georgetown - Rosslyn"}}
+{"op":"update","match":{"class":"Route","shortName":"DCDGR"},"update":{"shortName":"RS-DP"}}
+
+{"op":"update","match":{"class":"Route","shortName":"DCN22"},"update":{"longName":"Union Station - Navy Yard via Capitol Hill"}}
+{"op":"update","match":{"class":"Route","shortName":"DCN22"},"update":{"shortName":"US-NY"}}
+
+{"op":"update","match":{"class":"Route","shortName":"DCPOTSKY"},"update":{"longName":"Potomac - Skyland"}}
+{"op":"update","match":{"class":"Route","shortName":"DCPOTSKY"},"update":{"shortName":"POT-SKY"}}
+
+{"op":"update","match":{"class":"Route","shortName":"DCWE"},"update":{"longName": "Georgetown - Union Station"}}
+{"op":"update","match":{"class":"Route","shortName":"DCWE"},"update":{"shortName":"GT-US"}}
+
+{"op":"calendar_simplification"}

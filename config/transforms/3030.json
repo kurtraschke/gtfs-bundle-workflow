@@ -1,0 +1,6 @@
+{"op":"retain","match":{"class":"Agency","id":"MET"}}
+{"op":"update", "match":{"class":"Agency","id":"MET"}, "update": {"name":"Metro"}}
+{"op":"update","match":{"class":"Route","longName":"Richmond Highway Express Bus"},"update":{"shortName":"REX"}}
+{"op":"remove", "match":{"class":"Route","shortName":"18S"}}
+{"op":"transform","class":"com.kurtraschke.wmatagtfsnames.BusRouteNameTransformStrategy"}
+{"op":"calendar_simplification"}

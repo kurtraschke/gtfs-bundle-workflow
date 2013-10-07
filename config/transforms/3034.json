@@ -1,0 +1,3 @@
+{"op":"retain", "match":{"class":"Agency","id":"1"}}
+{"op":"update", "match":{"class":"Agency","id":"1"}, "update": {"name":"MTA Maryland"}}
+{"op":"remove", "match":{"class":"Stop", "id":"1_7649"}}
