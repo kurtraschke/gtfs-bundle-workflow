@@ -28,6 +28,8 @@
 	<!--<ref bean="A3041" />-->
 	<ref bean="A3090" />
 	<ref bean="A3091" />
+	<ref bean="A3070" />
+	<ref bean="A3048" />
       </list>
     </property>
   </bean>
@@ -103,7 +105,7 @@
   </bean>
 
   <bean id="A3072" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
-    <property name="path" value="work/inputs/3072.zip" />
+    <property name="path" value="work/outputs/3072" />
     <property name="defaultAgencyId" value="3072" />
     <property name="agencyIdMappings">
       <map>
@@ -141,5 +143,27 @@
       </map>
     </property>
   </bean>
+
+  <bean id="A3070" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/outputs/3070" />
+    <property name="defaultAgencyId" value="3070" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="PRTC" value="3070" />
+      </map>
+    </property>
+  </bean>
+
+  <bean id="A3048" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/inputs/3048.zip" />
+    <property name="defaultAgencyId" value="3048" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="2" value="CMRT" />
+        <entry key="3" value="3048" />
+      </map>
+    </property>
+  </bean>
+
 
 </beans>

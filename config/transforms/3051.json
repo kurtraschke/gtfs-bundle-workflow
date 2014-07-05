@@ -1,1 +1,3 @@
 {"op":"update", "match":{"class":"Agency","id":"MCRO"}, "update": {"name":"Ride On"}}
+
+{"op":"remove", "match": {"class":"Route", "id":"MCRO_2870"}}

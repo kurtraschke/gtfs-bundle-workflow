@@ -2,9 +2,12 @@
 
 # Configuration parameters
 FEEDS_DOC="0AvrkbWHnoksNdGdYam4wX214SXpoRmdia0FEalZvUHc"
-JAVA_HOME="/usr/java/jdk1.6.0_45"
-JAVA_PARAMETERS="-server -Xmx4G"
-BUILDER_JAR="onebusaway-transit-data-federation-builder-1.1.11-SNAPSHOT-withAllDependencies.jar"
+#JAVA_HOME="/usr"
+JAVA_HOME="/usr/lib/jvm/java-6-openjdk-amd64"
+JAVA_PARAMETERS="-server -Xmx3G"
+#BUILDER_JAR="onebusaway-transit-data-federation-builder-1.1.11-SNAPSHOT-withAllDependencies.jar"
+
+BUILDER_JAR="onebusaway-transit-data-federation-builder-1.1.11-SNAPSHOT-withAllDependencies-moblab.jar"
 
 ##########################
 
@@ -86,7 +89,7 @@ done < $TRANSFORMS_INDEX
 #Remove bundle output directory
 rm -rf "${WORKING_DIR}/bundle"
 
-#Build bundle
-#$JAVA -jar $JARS/$BUILDER_JAR \
-#    "${CONFIG_DIR}/bundle.xml" "${WORKING_DIR}/bundle"
+Build bundle
+$JAVA -jar $JARS/$BUILDER_JAR \
+    "${CONFIG_DIR}/bundle.xml" "${WORKING_DIR}/bundle"
 
