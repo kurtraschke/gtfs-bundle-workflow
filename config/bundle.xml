@@ -30,6 +30,7 @@
 	<!--<ref bean="A3091" />-->
 	<ref bean="A3070" />
 	<!--<ref bean="A3048" />-->
+	<ref bean="A3071" />
       </list>
     </property>
   </bean>
@@ -165,5 +166,14 @@
     </property>
   </bean>
 
+  <bean id="A3071" class="org.onebusaway.transit_data_federation.bundle.model.GtfsBundle">
+    <property name="path" value="work/inputs/3071.zip" />
+    <property name="defaultAgencyId" value="3071" />
+    <property name="agencyIdMappings">
+      <map>
+        <entry key="" value="3071" />
+      </map>
+    </property>
+  </bean>
 
 </beans>
