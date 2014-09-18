@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e -o pipefail
+
 # Configuration parameters
 FEEDS_DOC="0AvrkbWHnoksNdGdYam4wX214SXpoRmdia0FEalZvUHc"
 #JAVA_HOME="/usr"
@@ -65,11 +67,19 @@ done < $FEED_INDEX
 
 #Fix Fairfax Connector with this one-liner
 
-##unzip -p ${INPUT_DIR}/3068.zip google.log \
-##| grep "did not match" \
-##| sed "s/^.*TripId = \([0-9]*\).*$/{\"op\": \"remove\", \"match\": {\"class\": \"Trip\", \"id\": \"3068_\1\"} }/" \
-##| sort \
-##| uniq > ${CONFIG_DIR}/transforms/3068.json
+echo "Fixing Fairfax Connector..."
+
+unzip -p ${INPUT_DIR}/3068.zip google.log \
+| grep "did not match" \
+| sed "s/^.*TripId = \([0-9]*\).*$/{\"op\": \"remove\", \"match\": {\"class\": \"Trip\", \"id\": \"3068_\1\"} }/" \
+| sort \
+| uniq > ${CONFIG_DIR}/transforms/3068.json
+
+unzip -p ${INPUT_DIR}/3068.zip google.log \
+| grep "lost shape between" \
+| sed "s/^.*Pattern \([0-9]*\).*$/{\"op\": \"remove\", \"match\": {\"class\": \"Trip\", \"shapeId\": \"3068_\1\"} }/" \
+| sort \
+| uniq >> ${CONFIG_DIR}/transforms/3068.json
 
 #Transform feeds
 while IFS=, read INPUT_AGENCY DEFAULT_AGENCY_ID OUTPUT_AGENCY
