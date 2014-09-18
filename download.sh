@@ -89,7 +89,7 @@ done < $TRANSFORMS_INDEX
 #Remove bundle output directory
 rm -rf "${WORKING_DIR}/bundle"
 
-Build bundle
+#Build bundle
 $JAVA -jar $JARS/$BUILDER_JAR \
     "${CONFIG_DIR}/bundle.xml" "${WORKING_DIR}/bundle"
 
